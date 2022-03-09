@@ -1,0 +1,8 @@
+_ commandos:
+npm start  (rodar o servidor)
+
+
+Oque é o projeto.
+- Dar possiblidade de criar gráficos de forma visual e integrar ao SIGA ou qualquer outra ferramenta como um modulo
+- A principio irei utilizar a API da eCharts
+- Criar um gerneciador de Criação de Gráficos e painel

@@ -1,0 +1,60 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Visualizar Gráfico</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='resources/css/main.css'>
+</head>
+
+<body>
+    <!-- Prepare a DOM with a defined width and height for ECharts -->
+    <div id="divColunas"></div>
+    <div id="divColunas2"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/dist/echarts.min.js"></script>
+    <script src='resources/js/charts/utils.js'></script>
+    <script src='resources/js/charts/columns.js'></script>
+    <script src='resources/data/data.js'></script>
+    <script>
+
+        var api = 'http://localhost:8000/resources/data/data.json';
+        var colunas = new Columns("divColunas", "100%", "100vh", 'dark');
+
+        colunas.getLoadData(api, function (data) {
+            console.log(colunas.getCopyOption())
+
+            //adição de titulo
+            colunas.addProp(null, '{"title":{"text":"Gráfico Ordenado"}}');
+
+            //para ordenar valores
+            colunas.addProp("dataset.1", '{"transform": {"type": "sort", "config": [{ "dimension": "score", "order": "asc" }]}}');
+            colunas.addProp("xAxis", '{"axisLabel": { "interval": 0, "rotate": 30 }}');
+            colunas.addProp("series.0", '{"datasetIndex":1}');
+
+            //adicionar uma serie do tipo linha
+            colunas.addProp("series.1", ' {"name": "age","type": "line","encode": {"x": "name","y": "age","tooltip": [3, 1]},"datasetIndex": "1"}');
+
+            // trocar os eixos
+            // var eixoX = colunas.getOption("xAxis");
+            // var eixoY = colunas.getOption("yAxis");
+            // colunas.setOption("xAxis", eixoY);
+            // colunas.setOption("yAxis", eixoX);
+
+            //obter um valor de um array
+            // colunas2.setOption("series.0.type", "bar");
+
+            console.log(colunas.getCopyOption())
+
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>
