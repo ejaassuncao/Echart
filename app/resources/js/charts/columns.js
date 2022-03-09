@@ -14,17 +14,7 @@ var Columns = (function (divId, width, height, template) {
         yAxis: {
             type: 'value'
         },
-        series: [{
-            name: 'score',
-            type: 'bar',
-            encode: {
-                x: 'name',
-                y: 'score',
-                tooltip: [3, 1]
-            }
-        }
-
-        ]
+        series: []
     };
     return new Utils(this, option, divId, width, height, template);
 });

@@ -5,4 +5,48 @@ npm start  (rodar o servidor)
 Oque é o projeto.
 - Dar possiblidade de criar gráficos de forma visual e integrar ao SIGA ou qualquer outra ferramenta como um modulo
 - A principio irei utilizar a API da eCharts
-- Criar um gerneciador de Criação de Gráficos e painel
+- Criar um gerenciador de criação de Gráficos e painel
+
+
+Objetivo:
+Criar paineis e gráfico de forma simples , integrando com API (por usa vez essa APi pode vir de varias fontes de dados XLS,  JSON File, banco de dados)
+
+
+
+Proximo passo:
+- Criar uma Tela que gera um JSON para mim:
+Objeto:
+
+campo | valor
+[]    |  texto, inteiro, booleano, Objeto,  Array(para permitir criar novas Lista de objetos), Select (para permitir selecionar um campo)
+
+
+ou criar um json e dizer quais ao usuarios quais variaveis são editaveis,
+As variaveis podem ser os vaores acima
+criar Serie
+quais parametros o usuario pode passar
+
+type
+name
+x
+y
+tooltip colunas
+
+Typo grafico que essa para ira aparecer(Aba criar serie)
+com é um array
+Posicao no array
+propiedades
+type
+name
+x
+y
+tooltip colunas
+ Salvar
+
+
+
+
+
+
+
+
