@@ -5,7 +5,7 @@
 - Node
 
 
-## commands windos
+## commands windows
 
 - git clone https://github.com/ejaassuncao/Echart.git
 - cd Echart
