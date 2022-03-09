@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
 const port = 8000;
-app.listen(port, () => {
+const open = require('open');
+
+app.listen(port, function() { 
+    open(`http://localhost:${port}`);   
     console.log(`server running on: http:localhost:${port}`)
 });
 
