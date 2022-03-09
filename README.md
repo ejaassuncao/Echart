@@ -1,6 +1,6 @@
 # Echart
 
--commands
+## commands
 
 - git clone https://github.com/ejaassuncao/Echart.git
 - cd Echart
