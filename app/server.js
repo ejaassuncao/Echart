@@ -4,7 +4,7 @@ const port = 8000;
 const open = require('open');
 
 app.listen(port, function() { 
-    open(`http://localhost:${port}`);   
+    //open(`http://localhost:${port}`);   
     console.log(`server running on: http:localhost:${port}`)
 });
 

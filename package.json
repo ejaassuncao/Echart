@@ -4,12 +4,15 @@
   "description": "sistema de BI",
   "main": "server.js",
   "scripts": {
+    "babel":"npx babel --watch app/resources/components --out-dir app/resources/components/src  --presets react-app/prod",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app/server.js"
   },
   "author": "elton assunção",
   "license": "ISC",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
     "express": "^4.17.3",
     "nodemon": "^2.0.15",
     "open": "^8.4.0"
